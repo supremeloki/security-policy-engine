@@ -3,3 +3,4 @@ from .core import (
     Effect,
     PolicyEngine,
     PolicyError,
+    PolicyRule,
