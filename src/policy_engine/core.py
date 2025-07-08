@@ -30,3 +30,5 @@ class Subject:
     attributes: dict[str, Any] = field(default_factory=dict)
 
     def attr(self, name: str) -> Any:
+        return self.attributes.get(name)
+
