@@ -33,3 +33,4 @@ class Subject:
         return self.attributes.get(name)
 
 
+@dataclass(frozen=True)
