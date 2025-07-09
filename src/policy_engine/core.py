@@ -32,3 +32,4 @@ class Subject:
     def attr(self, name: str) -> Any:
         return self.attributes.get(name)
 
+
