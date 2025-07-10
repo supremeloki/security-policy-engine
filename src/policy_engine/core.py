@@ -36,3 +36,4 @@ class Subject:
 @dataclass(frozen=True)
 class Resource:
     resource_type: str
+    resource_id: str
