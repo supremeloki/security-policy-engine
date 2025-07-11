@@ -37,3 +37,5 @@ class Subject:
 class Resource:
     resource_type: str
     resource_id: str
+    attributes: dict[str, Any] = field(default_factory=dict)
+
