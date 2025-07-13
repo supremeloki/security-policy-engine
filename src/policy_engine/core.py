@@ -39,3 +39,4 @@ class Resource:
     resource_id: str
     attributes: dict[str, Any] = field(default_factory=dict)
 
+    @property
