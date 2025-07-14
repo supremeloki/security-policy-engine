@@ -40,3 +40,4 @@ class Resource:
     attributes: dict[str, Any] = field(default_factory=dict)
 
     @property
+    def qualified(self) -> str:
