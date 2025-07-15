@@ -43,3 +43,4 @@ class Resource:
     def qualified(self) -> str:
         return f"{self.resource_type}:{self.resource_id}"
 
+
