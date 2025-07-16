@@ -44,3 +44,5 @@ class Resource:
         return f"{self.resource_type}:{self.resource_id}"
 
 
+@dataclass(frozen=True)
+class PolicyRule:
