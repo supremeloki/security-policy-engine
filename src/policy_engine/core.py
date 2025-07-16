@@ -46,3 +46,4 @@ class Resource:
 
 @dataclass(frozen=True)
 class PolicyRule:
+    rule_id: str
