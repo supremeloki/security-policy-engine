@@ -48,3 +48,5 @@ class Resource:
 class PolicyRule:
     rule_id: str
     effect: Effect
+    actions: tuple[str, ...]
+    resources: tuple[str, ...]
