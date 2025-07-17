@@ -50,3 +50,4 @@ class PolicyRule:
     effect: Effect
     actions: tuple[str, ...]
     resources: tuple[str, ...]
+    subject_condition: Callable[[Subject], bool] | None = None
