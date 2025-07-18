@@ -54,3 +54,4 @@ class PolicyRule:
     environment_condition: Callable[[dict[str, Any]], bool] | None = None
     priority: int = 0
 
+    def __post_init__(self) -> None:
