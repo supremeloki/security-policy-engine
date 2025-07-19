@@ -55,3 +55,5 @@ class PolicyRule:
     priority: int = 0
 
     def __post_init__(self) -> None:
+        if not self.actions or not self.resources:
+            raise PolicySyntaxError(f"rule {self.rule_id!r} needs at least one action and resource")
