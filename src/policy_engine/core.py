@@ -60,3 +60,4 @@ class PolicyRule:
 
     def matches_action(self, action: str) -> bool:
         return any(a == "*" or fnmatch.fnmatch(action, a) for a in self.actions)
+
