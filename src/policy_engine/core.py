@@ -58,3 +58,5 @@ class PolicyRule:
         if not self.actions or not self.resources:
             raise PolicySyntaxError(f"rule {self.rule_id!r} needs at least one action and resource")
 
+    def matches_action(self, action: str) -> bool:
+        return any(a == "*" or fnmatch.fnmatch(action, a) for a in self.actions)
