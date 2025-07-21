@@ -62,3 +62,5 @@ class PolicyRule:
         return any(a == "*" or fnmatch.fnmatch(action, a) for a in self.actions)
 
     def matches_resource(self, resource: Resource) -> bool:
+        qualified = resource.qualified
+        return any(
