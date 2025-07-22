@@ -64,3 +64,4 @@ class PolicyRule:
     def matches_resource(self, resource: Resource) -> bool:
         qualified = resource.qualified
         return any(
+            r == "*" or fnmatch.fnmatch(qualified, r) or fnmatch.fnmatch(resource.resource_type, r)
