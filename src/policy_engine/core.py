@@ -65,3 +65,5 @@ class PolicyRule:
         qualified = resource.qualified
         return any(
             r == "*" or fnmatch.fnmatch(qualified, r) or fnmatch.fnmatch(resource.resource_type, r)
+            for r in self.resources
+        )
