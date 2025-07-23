@@ -68,3 +68,4 @@ class PolicyRule:
             for r in self.resources
         )
 
+    def matches_subject(self, subject: Subject) -> bool:
