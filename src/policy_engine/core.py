@@ -69,3 +69,5 @@ class PolicyRule:
         )
 
     def matches_subject(self, subject: Subject) -> bool:
+        if self.subject_condition is None:
+            return True
