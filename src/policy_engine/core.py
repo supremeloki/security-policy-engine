@@ -76,3 +76,5 @@ class PolicyRule:
     def matches_environment(self, env: dict[str, Any]) -> bool:
         if self.environment_condition is None:
             return True
+        return bool(self.environment_condition(env))
+
