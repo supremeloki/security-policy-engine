@@ -79,3 +79,5 @@ class PolicyRule:
         return bool(self.environment_condition(env))
 
 
+DEFAULT_DENY = Effect.DENY
+
