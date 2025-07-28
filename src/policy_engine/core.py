@@ -82,3 +82,4 @@ class PolicyRule:
 DEFAULT_DENY = Effect.DENY
 
 
+class PolicyEngine:
