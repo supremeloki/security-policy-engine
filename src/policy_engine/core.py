@@ -85,3 +85,4 @@ DEFAULT_DENY = Effect.DENY
 class PolicyEngine:
     def __init__(self, default_effect: Effect = DEFAULT_DENY,
                  deny_overrides: bool = True) -> None:
+        self._rules: dict[str, PolicyRule] = {}
