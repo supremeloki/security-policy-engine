@@ -89,3 +89,4 @@ class PolicyEngine:
         self._default = default_effect
         self._deny_overrides = deny_overrides
 
+    def add_rule(self, rule: PolicyRule) -> "PolicyEngine":
