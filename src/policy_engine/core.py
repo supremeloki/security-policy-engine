@@ -88,3 +88,4 @@ class PolicyEngine:
         self._rules: dict[str, PolicyRule] = {}
         self._default = default_effect
         self._deny_overrides = deny_overrides
+
