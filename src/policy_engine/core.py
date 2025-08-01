@@ -90,3 +90,5 @@ class PolicyEngine:
         self._deny_overrides = deny_overrides
 
     def add_rule(self, rule: PolicyRule) -> "PolicyEngine":
+        if rule.rule_id in self._rules:
+            raise ConflictingPolicyError(f"rule id reused: {rule.rule_id!r}")
