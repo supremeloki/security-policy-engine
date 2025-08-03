@@ -83,3 +83,5 @@ def test_attribute_group_condition(engine):
         subject_condition=attribute_in_group("role", {"admin", "auditor"}),
     ))
     auditor = Subject("aud-1", attributes={"role": "auditor"})
+    outsider = regular_subject()
+    assert engine.is_allowed(auditor, document(), "read")
