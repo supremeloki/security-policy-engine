@@ -88,3 +88,4 @@ def test_attribute_group_condition(engine):
     assert not engine.is_allowed(outsider, document(), "read")
 
 
+def test_environment_gate_blocks_outside_window(engine):
