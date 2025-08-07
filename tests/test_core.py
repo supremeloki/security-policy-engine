@@ -91,3 +91,4 @@ def test_attribute_group_condition(engine):
 def test_environment_gate_blocks_outside_window(engine):
     engine.add_rule(PolicyRule(
         rule_id="office-hours-only",
+        effect=Effect.ALLOW,
