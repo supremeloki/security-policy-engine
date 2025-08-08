@@ -93,3 +93,4 @@ def test_environment_gate_blocks_outside_window(engine):
         rule_id="office-hours-only",
         effect=Effect.ALLOW,
         actions=("export",),
+        resources=("report:*",),
