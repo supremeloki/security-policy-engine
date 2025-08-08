@@ -94,3 +94,5 @@ def test_environment_gate_blocks_outside_window(engine):
         effect=Effect.ALLOW,
         actions=("export",),
         resources=("report:*",),
+        environment_condition=time_window_condition(8, 18),
+    ))
