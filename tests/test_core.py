@@ -96,3 +96,4 @@ def test_environment_gate_blocks_outside_window(engine):
         resources=("report:*",),
         environment_condition=time_window_condition(8, 18),
     ))
+    inside = {"hour": 14}
