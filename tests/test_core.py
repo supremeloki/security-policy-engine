@@ -98,3 +98,4 @@ def test_environment_gate_blocks_outside_window(engine):
     ))
     inside = {"hour": 14}
     outside = {"hour": 3}
+    assert engine.is_allowed(regular_subject(),
