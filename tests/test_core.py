@@ -101,3 +101,4 @@ def test_environment_gate_blocks_outside_window(engine):
     assert engine.is_allowed(regular_subject(),
                              Resource("report", "q1"), "export", env=inside)
     assert not engine.is_allowed(regular_subject(),
+                                 Resource("report", "q1"), "export", env=outside)
