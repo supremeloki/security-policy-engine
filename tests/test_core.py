@@ -104,3 +104,5 @@ def test_environment_gate_blocks_outside_window(engine):
                                  Resource("report", "q1"), "export", env=outside)
 
 
+def test_flag_condition(engine):
+    engine.add_rule(PolicyRule(
