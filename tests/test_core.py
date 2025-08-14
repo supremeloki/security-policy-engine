@@ -108,3 +108,4 @@ def test_flag_condition(engine):
     engine.add_rule(PolicyRule(
         rule_id="break-glass", effect=Effect.ALLOW,
         actions=("emergency-write",), resources=("*",),
+        environment_condition=env_flag_enabled("incident_active"),
