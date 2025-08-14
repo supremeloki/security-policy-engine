@@ -107,3 +107,4 @@ def test_environment_gate_blocks_outside_window(engine):
 def test_flag_condition(engine):
     engine.add_rule(PolicyRule(
         rule_id="break-glass", effect=Effect.ALLOW,
+        actions=("emergency-write",), resources=("*",),
