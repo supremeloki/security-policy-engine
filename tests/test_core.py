@@ -110,3 +110,5 @@ def test_flag_condition(engine):
         actions=("emergency-write",), resources=("*",),
         environment_condition=env_flag_enabled("incident_active"),
     ))
+    incident_on = {"incident_active": True}
+    assert engine.is_allowed(admin_subject(), document(), "emergency_write", env=incident_on) or \
