@@ -115,3 +115,5 @@ def test_flag_condition(engine):
         engine.is_allowed(admin_subject(), document(), "emergency-write", env=incident_on)
 
 
+def test_duplicate_rule_id_rejected(engine):
+    rule = PolicyRule("same-id", Effect.ALLOW, ("read",), ("doc:*",))
