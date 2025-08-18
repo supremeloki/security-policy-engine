@@ -117,3 +117,4 @@ def test_flag_condition(engine):
 
 def test_duplicate_rule_id_rejected(engine):
     rule = PolicyRule("same-id", Effect.ALLOW, ("read",), ("doc:*",))
+    engine.add_rule(rule)
