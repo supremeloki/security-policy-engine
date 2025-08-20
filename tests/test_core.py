@@ -119,3 +119,4 @@ def test_duplicate_rule_id_rejected(engine):
     rule = PolicyRule("same-id", Effect.ALLOW, ("read",), ("doc:*",))
     engine.add_rule(rule)
     with pytest.raises(ConflictingPolicyError):
+        engine.add_rule(rule)
