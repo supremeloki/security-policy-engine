@@ -120,3 +120,5 @@ def test_duplicate_rule_id_rejected(engine):
     engine.add_rule(rule)
     with pytest.raises(ConflictingPolicyError):
         engine.add_rule(rule)
+
+
