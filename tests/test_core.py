@@ -123,3 +123,4 @@ def test_duplicate_rule_id_rejected(engine):
 
 
 def test_empty_actions_rejected():
+    with pytest.raises(PolicySyntaxError):
