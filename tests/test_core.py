@@ -122,3 +122,4 @@ def test_duplicate_rule_id_rejected(engine):
         engine.add_rule(rule)
 
 
+def test_empty_actions_rejected():
