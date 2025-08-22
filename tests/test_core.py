@@ -127,3 +127,4 @@ def test_empty_actions_rejected():
         PolicyRule("bad", Effect.ALLOW, (), ("doc:*",))
 
 
+def test_remove_rule_restores_default(engine):
