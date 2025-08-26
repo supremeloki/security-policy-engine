@@ -131,3 +131,5 @@ def test_remove_rule_restores_default(engine):
     rule = PolicyRule("temp", Effect.ALLOW, ("read",), ("doc:*",))
     engine.add_rule(rule)
     assert engine.remove_rule("temp") is True
+    assert engine.rule_count == 0
+    assert not engine.is_allowed(regular_subject(), document(), "read")
