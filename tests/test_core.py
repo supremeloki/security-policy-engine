@@ -130,3 +130,4 @@ def test_empty_actions_rejected():
 def test_remove_rule_restores_default(engine):
     rule = PolicyRule("temp", Effect.ALLOW, ("read",), ("doc:*",))
     engine.add_rule(rule)
+    assert engine.remove_rule("temp") is True
