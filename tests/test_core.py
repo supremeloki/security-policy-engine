@@ -133,3 +133,4 @@ def test_remove_rule_restores_default(engine):
     assert engine.remove_rule("temp") is True
     assert engine.rule_count == 0
     assert not engine.is_allowed(regular_subject(), document(), "read")
+
