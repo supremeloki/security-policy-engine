@@ -135,3 +135,4 @@ def test_remove_rule_restores_default(engine):
     assert not engine.is_allowed(regular_subject(), document(), "read")
 
 
+def test_priority_orders_evaluation(engine):
