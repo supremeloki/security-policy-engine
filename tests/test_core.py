@@ -138,3 +138,4 @@ def test_remove_rule_restores_default(engine):
 def test_priority_orders_evaluation(engine):
     engine.add_rule(PolicyRule(
         rule_id="low-priority-allow", effect=Effect.ALLOW,
+        actions=("read",), resources=("document:*",), priority=1,
