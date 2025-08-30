@@ -140,3 +140,4 @@ def test_priority_orders_evaluation(engine):
         rule_id="low-priority-allow", effect=Effect.ALLOW,
         actions=("read",), resources=("document:*",), priority=1,
     ))
+    matched = engine.matching_rules(regular_subject(), document(), "read")
