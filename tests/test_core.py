@@ -141,3 +141,4 @@ def test_priority_orders_evaluation(engine):
         actions=("read",), resources=("document:*",), priority=1,
     ))
     matched = engine.matching_rules(regular_subject(), document(), "read")
+    assert [r.rule_id for r in matched] == ["low-priority-allow"]
